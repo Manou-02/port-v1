@@ -1,9 +1,18 @@
-function App() {
+import { Switch, Route } from "wouter";
+import Home from "@/page/home";
+import NotFound from "@/page/not-found";
+
+function Router() {
   return (
-    <>
-      <p className="text-2xl text-red-600">zazaza</p>
-    </>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
   );
+}
+
+function App() {
+  return <Router />;
 }
 
 export default App;
